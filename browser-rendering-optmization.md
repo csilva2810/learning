@@ -32,16 +32,16 @@ Usually Javascript will be used to trigger changes on the elements that will cau
 
 ### Different rendering pipeline triggers
 #### Geometry properties change. 
-The browser will have to run all the pipeline again because *Layout* was affected. 
+The browser will have to run all the pipeline again because *Layout* was affected. <br />
 Pipeline: *Style > Layout > Paint > Composite*
 
 #### Paint properties change.
- When we change painting properties like *background-color* and *color*, the browser will skip the layout phase.
+ When we change painting properties like *background-color* and *color*, the browser will skip the layout phase. <br />
 Pipeline: *Style > Paint > Composite*
 
 #### Compositing properties change.
-If the change only compositing properties like *transform* and *opacity* the browser skip Layout and Paint .
-Pipeline: *Style > Composite*
+If the change only compositing properties like *transform* and *opacity* the browser skip Layout and Paint.  <br />
+Pipeline: *Style > Composite* <br />
 This is the best-performing version of the pipeline.
 
 ## RAIL
