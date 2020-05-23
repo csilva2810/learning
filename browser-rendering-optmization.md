@@ -1,7 +1,7 @@
 # Browser Rendering Optimization
 
 ## How to achieve 60fps
-When any change occurs in the browser the browser will paint/render new frames for this change. Usually this frame change occurs 60 times per second, which means that we have 16ms (1000ms/60f ) to render each frame. But the browser needs some amount of this 16ms to do some house keeping work. Which means that in the end of the day we will have about 10ms per frame.
+When any change occurs in the browser the browser will paint/render new frames for this change. Usually this frame change occurs 60 times per second, which means that we have 16ms (1000ms/60f) to render each frame. But the browser needs some amount of this 16ms to do some house keeping work. Which means that in the end of the day we will have about 10ms per frame.
 
 ## Browser rendering pipeline
 Here is what the browser does to render a page.
@@ -45,11 +45,16 @@ Pipeline: *Style > Composite* <br />
 This is the best-performing version of the pipeline.
 
 ## RAIL
-#####
+Rail is an acronym for **R**esponse, **A**nimate, **I**dle and **L**oad. These are the major areas of a web app lifecycle.
+
+* **Load:** This is related to the time when a web app is loaded when visited. This should happen within **1 second**.
+* **Idle:** When the app finishes loading the user will usually wait some time to start interacting with the app. This is the the iddle time available for us to load non critical resources. This loading should be break down into **50ms** chunks, so we can stop the process when the user starts interacting with the page. 
+* **Animate:** This is the phase when animation is happening. Animations should happen in less then **16ms** per frame.
+* **Response:** When the user interacts with the app. The app should response to the user interaction within **100ms**, otherwise the user experience starts feeling laggy and janky.
 
 ## Request Animation Frame
 #####
 
 ## References
-[Rendering Performance  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/rendering#3_js_css_style_composite)
-[Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860)
+* [Rendering Performance  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/rendering#3_js_css_style_composite)
+* [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860)
