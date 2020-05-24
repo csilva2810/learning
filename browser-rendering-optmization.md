@@ -52,9 +52,12 @@ Rail is an acronym for **R**esponse, **A**nimate, **I**dle and **L**oad. These a
 * **Animate:** This is the phase when animation is happening. Animations should happen in less then **16ms** per frame.
 * **Response:** When the user interacts with the app. The app should response to the user interaction within **100ms**, otherwise the user experience starts feeling laggy and janky.
 
+## Javascript
+Every Javascript we write for our apps will be compiled the browser's JIT (Just In Time) compiler (V8 in case of Google Chrome). JIT compilers will compile our code and also try to optmize the execution. One important aspect to be mentioned is that we should avoid doing micro optimizations. For example, we shoud not be concerned about using for loops instead of while loops.
+
 ## Request Animation Frame
 #####
 
 ## References
-* [Rendering Performance  |  Web Fundamentals  |  Google Developers](https://developers.google.com/web/fundamentals/performance/rendering#3_js_css_style_composite)
+* [Rendering Performance](https://developers.google.com/web/fundamentals/performance/rendering#3_js_css_style_composite)
 * [Browser Rendering Optimization](https://www.udacity.com/course/browser-rendering-optimization--ud860)
